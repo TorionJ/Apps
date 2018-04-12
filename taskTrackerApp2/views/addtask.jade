@@ -1,0 +1,13 @@
+extends layout
+head
+ 
+body 
+block content
+    div
+        h1= title
+        form#formAddTask(name="addtask",method="post",action="/addtask")
+            input#inputTaskName(type="text", placeholder="task name", name="taskname")
+            br
+            input#inputTaskDesc(type="text", placeholder="task description", name="taskdesc")
+            br
+            button#btnSubmit(type="submit") Add Task
