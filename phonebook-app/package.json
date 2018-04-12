@@ -1,0 +1,23 @@
+{
+  "name": "phonebook-app",
+  "version": "1.0.0",
+  "description": "a simple app to save contacts",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "phonebook",
+    "contact",
+    "social",
+    "media"
+  ],
+  "author": "Torion Johnson",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.3",
+    "mongoose": "^5.0.10",
+    "npm": "^5.7.1"
+  }
+}
