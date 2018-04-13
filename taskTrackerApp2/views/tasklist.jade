@@ -3,7 +3,7 @@ extends layout
 block content
     h1#taskHeader.
         Task List
-    div#listContainer
+    #listContainer
         ul
             each task, i in tasklist
                 li= task.description

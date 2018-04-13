@@ -4,7 +4,7 @@ head
 body 
 block content
     div
-        h1= title
+        h1#addTask= title
         form#formAddTask(name="addtask",method="post",action="/addtask")
             input#inputTaskName(type="text", placeholder="task name", name="taskname")
             br

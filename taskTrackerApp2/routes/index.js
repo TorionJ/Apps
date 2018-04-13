@@ -34,7 +34,7 @@ router.post('/addtask', function(req, res) {
   var db = req.db;
 
   // Get our form values. These rely on the "name" attributes
-  var taskName1 = req.body.taskname;
+  var taskname = req.body.taskname;
   var taskDesc = req.body.taskdesc;
 
   // Set our collection
@@ -42,7 +42,7 @@ router.post('/addtask', function(req, res) {
 
   // Submit to the DB
   collection.insert({
-      "task" : taskName1,
+      "task" : taskName,
       "description" : taskDesc,
   }, function (err, doc) {
       if (err) {
