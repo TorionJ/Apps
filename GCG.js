@@ -7,9 +7,14 @@ var messageDisplay = document.querySelector("#message");
 var h1 = document.querySelector('h1');
 var resetButton = document.querySelector('#reset');
 var modeBtns = document.querySelectorAll('.mode');
+var rulesButton = document.getElementsByClassName('rules')[0];
+var rules = document.getElementById('overlay');
+
 
 
 colorDisplay.textContent = pickedColor;
+
+
 
 init();
 
@@ -21,7 +26,17 @@ function init(){
 
 resetButton.addEventListener('click', function(){
     reset();
-})
+});
+
+rulesButton.addEventListener('click', function(){
+    document.getElementById('overlay').style.display= 'block';
+});
+rules.addEventListener('click', function(){
+    if(document.getElementById('overlay').style.display === 'block'){
+        document.getElementById('overlay').style.display= 'none';
+    }
+});
+
 
 function changeColors(color){
     //loop through all squares
