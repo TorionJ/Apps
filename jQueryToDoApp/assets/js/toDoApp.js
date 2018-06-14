@@ -23,15 +23,7 @@ $("input[type='text']").keypress(function(event){
     }
 });
 
-$("i:first").click(function(){
-    if($('i:first').attr("class") === "fas fa-plus"){
-        $('i:first').removeClass("fas fa-plus");
-        $('i:first').addClass("fas fa-angle-double-up")
-        $('input').css("display", "block");
-    }
-    else if($('i:first').attr("class") === "fas fa-angle-double-up"){
-        $('i:first').removeClass("fas fa-angle-double-up");
-        $('i:first').addClass("fas fa-plus")
-        $('input').css("display", "none");
-    }
+$("i:first").click(function() {
+  $(this).toggleClass('fas fa-plus fas fa-angle-double-up');
+  $('input').toggle();
 });
