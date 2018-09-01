@@ -1,0 +1,41 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+hr {
+	border-top: 1px solid lightblue;
+	border-bottom: 1px solid lightblue;
+}
+h1 {
+  font-size: 50px;
+  margin: 5px;
+}
+input[type=text] {
+  width: 250px;
+  border: 2px solid white;
+  margin: 5px;
+  padding: 5px;
+}
+input[type=text]:hover {
+  border: 2px solid darkkhaki;
+}
+div {
+  width: 350px;
+  margin: 0px auto;
+  background-color: khaki;
+  box-shadow: 10px 10px 5px darkkhaki;
+  border: 2px inset black;
+}
+button {
+  margin: 5px 5px 5px 135px;
+  border-radius: 25px; 
+}
+#taskHeader{
+  width:30%;
+  margin: 5px auto;
+}
+#listContainer{
+  width: 30%;
+  padding: 3px;
+  border: 2px solid black;
+}

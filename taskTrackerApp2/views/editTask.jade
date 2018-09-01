@@ -1,0 +1,16 @@
+extends layout
+ 
+block content
+    h1 Edit Task
+    form#formAddTask(name="updateTask",method="post",action="/updateTask/#{thisTask._id}")
+        each task, i in thisTask
+            input#inputTaskId(hidden='true', name='_id', value='#{thisTask._id}', disabled="true")
+            br
+            input#inputTaskName(type='text', name='task', placeholder='#{thisTask.task}', required='')
+            br
+            input#inputTaskDesc(type='text', name='desc', placeholder='#{thisTask.desc}', required='')
+            br
+            button#btnSubmit(type="submit" name="updateTask") Update Task
+            br
+            button#btnSubmit() 
+                a(style="color: #ffffff" href="/") CANCEL

@@ -1,0 +1,14 @@
+head
+  link(rel='stylesheet', href='/stylesheets/style.css')
+body  
+  block content
+    div
+      h1#addTask= title
+      form#formAddTask(name="addtask",method="post",action="/addtask")
+          input#inputTaskName(type="text", placeholder="task name", name="taskname")
+          br
+          input#inputTaskDesc(type="text", placeholder="task description", name="taskdesc")
+          br
+          button#btnSubmit(type="submit", name='addtask') Add Task
+          button#btnSubmit() 
+            a(style="color: #ffffff" href="/") CANCEL

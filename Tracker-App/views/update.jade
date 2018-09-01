@@ -1,0 +1,18 @@
+extends layout
+link(rel='stylesheet', href='/stylesheets/style.css')
+block content
+    h1 Edit Task
+    form#formAddTask(name="updatetask",method="post",action="/updatetask/#{thisTask._id}")
+      input#inputTaskId(hidden='true', name='_id', value='#{thisTask._id}', disabled="true")
+      br
+      input#inputTaskName(type='text', name='task', placeholder='#{thisTask.task}', required='')
+      br
+      input#inputTaskDesc(type='text', name='desc', placeholder='#{thisTask.desc}', required='')
+      br
+      button#btnSubmit(type="submit" name="updatetask") Save Task
+      br
+    form(method="delete", action="/deletetask/#{thisTask._id}")
+      button#btnSubmit(type="submit") Delete
+    form#formAddTask(name="addtask",method="post",action="/addtask")
+      button#btnSubmit() 
+          a(style="color: #ffffff" href="/tasks") CANCEL

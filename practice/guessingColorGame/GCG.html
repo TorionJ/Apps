@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Guessing Color Game</title>
+    <link rel="stylesheet" href="GCG.css">
+</head>
+<body>
+    <div id="overlay" >
+        <div id="text">
+            <div>
+                <h2>
+                    Guessing Color Game
+                </h2>
+                <p>
+                    You have to guess the color of the rgb inputs(Red, Green, and Blue).
+                    255 is the max of each color. Goodluck!
+                </p>
+            </div>    
+        </div>
+    </div>    
+    <h1>The Great
+        <br> 
+        <span id="colorDisplay">RGB</span> 
+        <br>
+        Color Game
+    </h1>
+    
+    <div id="stripe">
+        <button id="reset">New Colors</button>
+        <span id="message"></span>
+        <button class="mode">Easy</button>
+        <button class="mode selected">Hard</button>
+        <button class="rules">Rules</button>
+    </div>
+
+    <div id="container">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+    </div>
+    <script type="text/javascript" src="GCG.js"></script>
+</body>
+</html>

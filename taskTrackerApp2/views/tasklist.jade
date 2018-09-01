@@ -6,5 +6,7 @@ block content
     #listContainer
         ul
             each task, i in tasklist
+                li
+                    a(href='/editTask')=task.task
                 li= task.description
                 hr

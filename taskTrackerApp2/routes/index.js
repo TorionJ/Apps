@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
 
 /* GET TaskTracker page. */
 router.get('/tasks', function(req, res) {
-  res.render('tasks', { title: 'Task Tracker !' });
+  res.render('tasks', { title: 'Task Tracker!' });
 });
 
 /* GET tasklist page. */
@@ -23,10 +23,13 @@ router.get('/tasklist', function(req, res) {
 });
 
 /* GET New TASK page. */
-	router.get('/addtask', function(req, res) {
-    	res.render('addtask', { title: 'Add New Task' });
-	});
-
+router.get('/addtask', function(req, res) {
+	res.render('addtask', { title: 'Add New Task' });
+});
+/*Get Edit task page */
+router.get('/editTask', function(req, res) {
+	res.render('editTask');
+}); 
   // POST to Add Task Service //
 router.post('/addtask', function(req, res) {
 
@@ -34,7 +37,7 @@ router.post('/addtask', function(req, res) {
   var db = req.db;
 
   // Get our form values. These rely on the "name" attributes
-  var taskname = req.body.taskname;
+  var taskName = req.body.taskname;
   var taskDesc = req.body.taskdesc;
 
   // Set our collection

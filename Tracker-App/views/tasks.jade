@@ -1,0 +1,17 @@
+extends layout
+link(rel='stylesheet', href='/stylesheets/style.css')
+block content
+    h1#taskHeader.
+        Task List
+    #listContainer
+        ul
+            each task, i in tasks
+                            
+                li
+                  a(for task, i in tasks, href="/tasks/#{task._id}")= task.task 
+                li= task.desc
+                hr
+        button#btnSubmit() 
+                a(style="color: #ffffff" href="/") HOME
+
+        // a(for tasked, p in tasks', [routerlink]="['/product-details', product.id]")

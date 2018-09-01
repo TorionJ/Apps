@@ -1,0 +1,9 @@
+extends layout
+link(rel='stylesheet', href='/stylesheets/style.css')
+block content
+  div
+      h1= message
+      p Go Back to #{title}
+      
+      button#btnSubmit() 
+          a(style="color: #ffffff" href="/tasks") TASK LIST
